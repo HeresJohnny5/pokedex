@@ -8,12 +8,12 @@ class Pokecard extends Component {
       <div>
         {cards.map((card, key) =>
           <div key={key}>
+            <img src={card.img} />
             <h2>{card.name}</h2>
             <p>Type: {card.type}</p>
             <p>EXP: {card.base_experience}</p>
           </div>
-        )
-        }
+        )}
       </div>
     );
   }
