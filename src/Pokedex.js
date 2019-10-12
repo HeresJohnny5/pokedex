@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// CUSTOM COMPONENTS
 import Pokecard from './Pokecard';
 
 class Pokedex extends Component {
@@ -56,6 +57,8 @@ class Pokedex extends Component {
     ];
 
     const imgSrc = (cards) => {
+      console.log('TESTING');
+
       return cards.map(card => {
         let idLength = card.id.toString().length;
         let newId;
@@ -77,7 +80,9 @@ class Pokedex extends Component {
     return (
       <div>
         <h1 className="text-center">Pokedex</h1>
-        <Pokecard cards={cards} />
+        {cards.map((card, key) => (
+          <Pokecard key={key} card={card} />
+        ))}
       </div>
     );
   }
