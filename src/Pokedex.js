@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 // CUSTOM COMPONENTS
 import Pokecard from './Pokecard';
 
+// COMPONENT STYLES
+import './Pokedex.css';
+
 class Pokedex extends Component {
   render() {
     const cards = [
@@ -78,11 +81,13 @@ class Pokedex extends Component {
     imgSrc(cards);
 
     return (
-      <div>
-        <h1 className="text-center">Pokedex</h1>
-        {cards.map((card, key) => (
-          <Pokecard key={key} card={card} />
-        ))}
+      <div className="Pokedex">
+        <h1>Pokedex</h1>
+        <div className="Pokedex-cards">
+          {cards.map((card, key) => (
+            <Pokecard key={key} card={card} />
+          ))}
+        </div>
       </div>
     );
   }

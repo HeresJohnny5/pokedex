@@ -13,9 +13,9 @@ class Pokecard extends Component {
       <div className='Pokecard'>
         <div key={card.key}>
           <img src={card.img} alt={card.name} />
-          <h2>{card.name}</h2>
-          <p>Type: {card.type}</p>
-          <p>EXP: {card.base_experience}</p>
+          <h2 className='Pokecard-title'>{card.name}</h2>
+          <p className='Pokecard-data'>Type: {card.type}</p>
+          <p className='Pokecard-data'>EXP: {card.base_experience}</p>
         </div>
       </div>
     );
