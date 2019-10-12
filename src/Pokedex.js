@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Pokecard from './Pokecard';
 
 class Pokedex extends Component {
@@ -75,7 +76,7 @@ class Pokedex extends Component {
 
     return (
       <div>
-        <h1>Pokedex</h1>
+        <h1 className="text-center">Pokedex</h1>
         <Pokecard cards={cards} />
       </div>
     );
