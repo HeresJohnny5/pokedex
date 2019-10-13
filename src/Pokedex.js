@@ -9,10 +9,17 @@ import './Pokedex.css';
 class Pokedex extends Component {
   render() {
     const { cards, total, isWinner } = this.props;
+    let title;
+
+    if (isWinner) {
+      title = <h2 className='Pokedex-winner'>Winning Hand</h2>
+    } else {
+      title = <h2 className='Pokedex-loser'>Losing Hand</h2>
+    }
 
     return (
       <div className='Pokedex'>
-        <h2 className={isWinner ? 'Pokedex-winner' : 'Pokedex-loser'}>{isWinner ? 'Winner' : 'Loser'}</h2>
+        {title}
         <p className='Pokedex-total'>Total Experience: {total}</p>
         <div className='Pokedex-cards'>
           {cards.map((card, key) => (
