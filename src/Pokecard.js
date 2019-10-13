@@ -6,16 +6,16 @@ import React, { Component } from 'react';
 import './Pokecard.css';
 
 class Pokecard extends Component {
-  render() {
-    const card = this.props.card;
+  card = this.props.card;
 
+  render() {
     return (
       <div className='Pokecard'>
-        <div key={card.key}>
-          <img src={card.img} alt={card.name} />
-          <h2 className='Pokecard-title'>{card.name}</h2>
-          <p className='Pokecard-data'>Type: {card.type}</p>
-          <p className='Pokecard-data'>EXP: {card.base_experience}</p>
+        <div key={this.card.key}>
+          <img src={this.card.img} alt={this.card.name} />
+          <h2 className='Pokecard-title'>{this.card.name}</h2>
+          <p className='Pokecard-data'>Type: {this.card.type}</p>
+          <p className='Pokecard-data'>EXP: {this.card.base_experience}</p>
         </div>
       </div>
     );
