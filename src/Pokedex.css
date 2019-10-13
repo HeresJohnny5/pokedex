@@ -4,6 +4,14 @@
   flex-wrap: wrap;
 }
 
-.Pokedex-total {
+.Pokedex-winner, Pokedex-loser, .Pokedex-total {
   text-align: center;
+}
+
+.Pokedex-winner {
+  color: 'green';
+}
+
+.Pokedex-loser {
+  color: 'red';
 }
